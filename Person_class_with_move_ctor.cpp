@@ -10,7 +10,7 @@ public:
         age = rhs.age;
         name = rhs.name;
     }
-    ~Person = default;
+    ~Person() = default;
     void printf() {
         std::cout << "age = " << age << std::endl;
         std::cout << "name = " << name << std::endl;
