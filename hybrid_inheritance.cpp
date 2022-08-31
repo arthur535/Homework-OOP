@@ -13,14 +13,14 @@ class Child2 : public Parent {};
 
 class Grandchild : public Child1, public Child2 {
 public:
-    int getdata(Grandchild* p) {
-        Child1* obj = reinterpret_cast<Child1*>(p);
+    int getdata() {
+        Child1* obj = reinterpret_cast<Child1*>(this);
         return obj->getdata();
     }
 };
 int main() {
     Grandchild obj;
-    std::cout << obj.getdata(&obj);
+    std::cout << obj.getdata();
 }
 
 
